@@ -13,8 +13,8 @@
   <script>
     // Assume 1 coin = $0.05 (example rate)
     function calculateValue() {
-      const coins = document.getElementById('coins').value;
-      if (coins === '' || coins < 0) {
+      const coins = parceFloat(document.getElementById('coins').value);
+      if (isNaN('coins') || coins < 0) {
         alert('Please enter a valid number of coins.');
         return;
       }
@@ -24,3 +24,4 @@
   </script>
 </body>
 </html>
+
